@@ -49,8 +49,10 @@ if($passLength > 0){
              <div class="result">
                 <input type="text" disabled placeholder="Password generata:" value="<?= $generatedPassword ?>" class="text-white fw-bold">
              </div>
+             <div class="andrea-gulli mt-3 text-white">
+                Made with &hearts; by Andrea Gulli
+             </div>
          </div>
     </div>
 </body>    
-
 </html>

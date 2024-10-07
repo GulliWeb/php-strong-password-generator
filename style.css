@@ -45,6 +45,10 @@ input, button{
     border-radius: 12px;
 }
 
+.result{
+    margin-top: 10px;
+}
+
 input:hover, button:hover{
     cursor: pointer;
 }
