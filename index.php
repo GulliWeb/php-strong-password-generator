@@ -9,7 +9,6 @@ $generatedPassword = '';
 // Creo una condizione if che verifica se l'utente ha inviato il form (premuto il bottone) ed ha inserito una lunghezza (>0) per generare la password.
 if($passLength > 0){
     $generatedPassword = generatePassword($passLength);
-    echo($generatedPassword);
     }
 ?>
 
