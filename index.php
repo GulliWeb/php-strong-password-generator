@@ -29,34 +29,40 @@ function generatePassword($length){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>PHP PASSWORD GENERATOR</title>
 </head>
 <body>
-    <div class="title">
-        <h1>
-            Strong Password Generator
-        </h1>
-        <h2>
-            Genera una password sicura
-        </h2>
-    </div>
     
     <div class="card">
-        <form action="" method="get">
-            <label for="numPass"></label>
-            <input id="numPass" name="numPass" type="number" min="1" max="20">
-            <button id="btnSubmit" name="btnSubmit" type="submit" >
-                Invia
-            </button>
-            <button id="btnReset" name="btnReset" type="reset">
-                Annulla
-            </button>
-        </form>
-    </div>
+        <!-- Title -->
+        <div class="title text-center">
+            <h1>
+                Strong Password Generator
+            </h1>
+            <h2>
+                Genera una password sicura
+            </h2>
+        </div>
     
-
-
+        <!-- Form -->
+         <div class="form-wrapper text-center">
+             <form action="" method="get">
+                 <label class="w-100 mb-2 text-white" for="numPass">Inserisci la lungheza della password desiderata:</label>
+                 <input id="numPass" name="numPass" type="number" min="1" max="20">
+                 <button id="btnSubmit" name="btnSubmit" type="submit" >
+                     Invia
+                 </button>
+                 <button id="btnReset" name="btnReset" type="reset">
+                     Annulla
+                 </button>
+             </form>
+             <div class="result">
+                <input type="text" disabled placeholder="Password generata:" value="<?= $generatedPassword ?>" class="text-white fw-bold">
+             </div>
+         </div>
+    </div>
 </body>    
 
 </html>
