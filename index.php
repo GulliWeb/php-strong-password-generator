@@ -3,9 +3,9 @@
 $passLength = isset(($_GET["numPass"])) ? $_GET["numPass"] : 0;;
 $generatedPassword = '';
 
-// Funzione che mi genera una password casuale lunga quanto scelto da lui stesso nel form
+// Funzione che mi genera una password casuale lunga quanto scelto dall'utente stesso nel form
 function generatePassword($length){
-    // Dichiaro due variabili: password che sarà la stringa che compone la password generata e che verrà ritornata dalla funzione, characters essendo una stringa contente tutti i caratteri per randomizzare poi attraverso questa variabile e creare la password casuale.
+    // Dichiaro due variabili: password che sarà la stringa che compone la password generata e che verrà ritornata dalla funzione, characters che essendo una stringa contente tutti i caratteri, per randomizzare attraverso loro e creare la password casuale.
     $password = '';
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
    
@@ -29,6 +29,7 @@ function generatePassword($length){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP PASSWORD GENERATOR</title>
 </head>
 <body>
@@ -40,22 +41,22 @@ function generatePassword($length){
             Genera una password sicura
         </h2>
     </div>
-
-    <div class="card-wrapper">
-        <div class="card">
-            <form action="" method="get">
-                <label for="numPass"></label>
-                <input id="numPass" name="numPass" type="number" min="1" max="20">
-                <button id="btnSubmit" name="btnSubmit" type="submit" >
-                    Invia
-                </button>
-                <button id="btnReset" name="btnReset" type="reset">
-                    Annulla
-                </button>
-            </form>
-        </div>
-    </div>
-
     
-</body>
+    <div class="card">
+        <form action="" method="get">
+            <label for="numPass"></label>
+            <input id="numPass" name="numPass" type="number" min="1" max="20">
+            <button id="btnSubmit" name="btnSubmit" type="submit" >
+                Invia
+            </button>
+            <button id="btnReset" name="btnReset" type="reset">
+                Annulla
+            </button>
+        </form>
+    </div>
+    
+
+
+</body>    
+
 </html>
